@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deep Learning"
+  short_description: "Validate data, training, inference, and reproducibility"
+  default_prompt: "Use $deep-learning to complete the requested task and report verification evidence."

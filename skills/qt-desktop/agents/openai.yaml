@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qt Desktop"
+  short_description: "Build responsive Qt applications with safe lifecycles"
+  default_prompt: "Use $qt-desktop to complete the requested task and report verification evidence."

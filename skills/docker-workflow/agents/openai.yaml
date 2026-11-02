@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docker Workflow"
+  short_description: "Build and verify reproducible container workflows"
+  default_prompt: "Use $docker-workflow to complete the requested task and report verification evidence."

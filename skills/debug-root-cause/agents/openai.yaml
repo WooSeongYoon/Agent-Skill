@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug Root Cause"
+  short_description: "Trace failures from real evidence to a minimal fix"
+  default_prompt: "Use $debug-root-cause to complete the requested task and report verification evidence."

@@ -1,0 +1,54 @@
+{
+  "reviewed_at": "2026-11-02",
+  "sources": [
+    {
+      "repository": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    },
+    {
+      "repository": "ComposioHQ/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "commit": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    },
+    {
+      "repository": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    },
+    {
+      "repository": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    },
+    {
+      "repository": "openai/plugins",
+      "url": "https://github.com/openai/plugins",
+      "commit": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    },
+    {
+      "repository": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    },
+    {
+      "repository": "agentskills/agentskills",
+      "url": "https://github.com/agentskills/agentskills",
+      "commit": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+      "reviewed_at": "2026-11-02",
+      "mode": "reference-only; independently authored instructions; no vendored upstream files"
+    }
+  ]
+}

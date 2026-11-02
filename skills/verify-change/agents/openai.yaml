@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Change"
+  short_description: "Verify changed behavior and report evidence honestly"
+  default_prompt: "Use $verify-change to complete the requested task and report verification evidence."

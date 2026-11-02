@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Discovery"
+  short_description: "Inspect repository facts before choosing a workflow"
+  default_prompt: "Use $project-discovery to complete the requested task and report verification evidence."

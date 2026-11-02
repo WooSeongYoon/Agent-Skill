@@ -1,0 +1,30 @@
+import numpy as np
+import torch
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+
+def prepare(features, labels):
+    scaler = StandardScaler().fit(features)
+    normalized = scaler.transform(features)
+    return train_test_split(normalized, labels, random_state=42)
+
+
+def predict(model, batch):
+    with torch.no_grad():
+        return model(batch)
+
+
+def select_checkpoint(models, test_loader):
+    best_score = -np.inf
+    best_model = None
+    for model in models:
+        correct = total = 0
+        for inputs, targets in test_loader:
+            output = predict(model, inputs)
+            correct += (output.argmax(dim=1) == targets).sum().item()
+            total += len(targets)
+        score = correct / total
+        if score > best_score:
+            best_score, best_model = score, model
+    return best_model, best_score

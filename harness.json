@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "core": ["project-discovery", "debug-root-cause", "verify-change"],
+  "profiles": {
+    "python": ["python-engineering"],
+    "qt": ["python-engineering", "qt-desktop"],
+    "docker": ["docker-workflow"],
+    "web": ["web-development"],
+    "ml": ["python-engineering", "deep-learning"],
+    "full": ["python-engineering", "qt-desktop", "docker-workflow", "web-development", "deep-learning"]
+  },
+  "agents": ["code-reviewer", "failure-analyst", "ml-reviewer"]
+}

@@ -1,0 +1,53 @@
+import time
+from PySide6.QtCore import QObject, QThread, Signal, Slot
+from PySide6.QtWidgets import QWidget, QPushButton, QLabel, QVBoxLayout
+
+
+class Worker(QObject):
+    finished = Signal()
+
+    def __init__(self, label):
+        super().__init__()
+        self.label = label
+        self.cancelled = False
+
+    @Slot()
+    def run(self):
+        for index in range(100):
+            if self.cancelled:
+                break
+            time.sleep(0.2)
+            self.label.setText(str(index))
+        self.finished.emit()
+
+    @Slot()
+    def cancel(self):
+        self.cancelled = True
+
+
+class Window(QWidget):
+    cancel_requested = Signal()
+
+    def __init__(self):
+        super().__init__()
+        self.label = QLabel('ready')
+        self.start = QPushButton('Start')
+        self.cancel = QPushButton('Cancel')
+        layout = QVBoxLayout(self)
+        for widget in (self.label, self.start, self.cancel):
+            layout.addWidget(widget)
+        self.start.clicked.connect(self.begin)
+        self.cancel.clicked.connect(self.cancel_requested.emit)
+
+    def begin(self):
+        self.thread = QThread(self)
+        self.worker = Worker(self.label)
+        self.worker.moveToThread(self.thread)
+        self.thread.started.connect(self.worker.run)
+        self.cancel_requested.connect(self.worker.cancel)
+        self.thread.start()
+
+    def closeEvent(self, event):
+        self.thread.quit()
+        self.thread.wait()
+        event.accept()

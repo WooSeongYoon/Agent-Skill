@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Engineering"
+  short_description: "Make small Python changes with meaningful verification"
+  default_prompt: "Use $python-engineering to complete the requested task and report verification evidence."
